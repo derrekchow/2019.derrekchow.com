@@ -1,0 +1,93 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+  	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<link rel="stylesheet"  type="text/css" href="./vendor/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="./vendor/skeleton.css" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" media="all" href="https://rsms.me/inter/inter.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="./main.css" />
+
+		<title>Derrek Chow</title>
+		<meta name="description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
+
+		<meta property="og:title" content="Derrek Chow">
+		<meta property="og:description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
+		<meta property="og:image" content="https://derrekchow.com/social.png">
+		<meta property="og:url" content="https://derrekchow.com">
+
+		<meta name="twitter:title" content="Derrek Chow">
+		<meta name="twitter:description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
+		<meta name="twitter:image" content="https://derrekchow.com/social.png">
+		<meta name="twitter:card" content="summary_large_image">
+	
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102564495-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-102564495-1');
+		</script>
+	</head>
+	<body id="home">
+		<nav>
+			<a href="./articles">Articles</a>
+			<a href="./work">Work & Projects</a>
+			<a>Resume</a>
+			<a href="./more">More</a>
+		</nav>
+		<main class="row">
+			<section class="six columns">
+			
+			</section>
+			<header class="six columns">
+				<h1 class="title">Derrek Chow</h1>
+				<p>
+					I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.
+					<br/><br/>
+					<span id="context"></span>
+				</p>
+			</header>
+			<div id="dots"></div>
+		</main>
+
+		<section class="cards" style="display:none">
+			<div id="slick" style="display: none;">
+				<div class="card" taglink="https://www.tedxuw.com/" tagline="I am showcasing amazing and inspiring individuals of Waterloo as the Web and UX Manager at TEDxUW">
+					<img class="accent" style="top: 10%; opacity: 0.12;" width="100%" src="./assets/cards/tedx-4.svg"/>
+					<img class="accent" style="top:40%; left: 25%" width="400px" src="./assets/cards/tedx-3.svg"/>
+					<img style="left:5%; top:10%" width="700px" src="./assets/cards/tedx-2.png"/>
+					<img style="top:35%; left:11%" width="250px" src="./assets/cards/tedx-1.png"/>
+				</div>
+				<div class="card" tagline="I am exploring the future of education and learning as a Software Developer at D2L.">
+					<img style="top:20%; left: 5%" width="40%" src="./assets/cards/d2l-1.png"/>
+					<img class="accent" style="top:45%; left: 5%" width="20%" src="./assets/cards/d2l-2.png"/>
+				</div>
+				<div class="card" tagline="I am changing the way University students rate and review courses as the Lead Designer at UW Flow">
+					<img style="top:10%; left: 5%" width="800px" src="./assets/cards/flow-1.png"/>
+					<img style="top:45%; left: 10%" width="600px" src="./assets/cards/flow-3.png"/>
+				</div>
+			</div>
+			<div class="controls" style="display: none">
+				<div class="control next">&#8594;</div>
+				<div class="control prev">&#8592;</div>
+			</div>
+		</section>
+		
+		<footer>© Derrek Chow 2019</footer>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+		<script type="text/javascript">
+			$('body').fadeIn();
+		</script>
+	</body>
+</html>
