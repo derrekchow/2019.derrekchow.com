@@ -39,7 +39,6 @@
 	<body id="work" class="container">
 		<nav>
 			<a href="../">Home</a>
-			<a href="../articles/">Articles</a>
 			<a href="../work/">Work & Projects</a>
 			<a>Resume</a>
 			<a href="../" class="active">More</a>
@@ -48,26 +47,111 @@
 		<main class="row">
 			<section class="items">
 				<h1 class="title">More</h1>
-				<article>
+				<article class="photos">
 					<h2>PHOTOS</h2>
-					
+					<div class="grid" style="display:none">
+						<div class="grid-item">
+							<img src="../assets/photos/bridge.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/cat.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/concert.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/cottage.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/dog.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/museum.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/ride1.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/ride2.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/sky1.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/sky2.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/sky3.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/to1.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/to2.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/to3.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/to4.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/trees.jpg" />
+						</div>
+						<div class="grid-item">
+							<img src="../assets/photos/wall.jpg" />
+						</div>
+					</div>
 				</article>
 				<article>
-					<h2></h2>
-					
+					<h2>MUSIC</h2>
+					<div class="row">
+						<div class="six columns">
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/7MZsWaPjQcBLP01pWe6jwt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</div>
+						<div class="six columns">
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/6QROSuNHh84RpFR5L2m5oB" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns">
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/18AZmKpXH1kVdBMnOdkepI" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</div>
+						<div class="six columns">
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/4o8uE2YKYZR3F3gbaTdb14" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="six columns">
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/1vqXRz9aMz8lfTcWgMVfec" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</div>
+						<div class="six columns"></div>
+					</div>
 				</article>
 				<article>
-					<h2>SIDE PROJECTS</h2>
-					
+					<h2>ARTICLES</h2>
+					<p>coming soon...</p>
 				</article>
 			</section>
 
 		</main>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('body').fadeIn();
+				var $grid = $('.grid').masonry({
+					itemSelector: '.grid-item',
+				});
+				
+				// layout Masonry after each image loads
+				$grid.imagesLoaded().progress( function() {
+					$grid.masonry('layout');
+					$('.grid').fadeIn();
+				});
 			});
 		</script>
 	</body>
