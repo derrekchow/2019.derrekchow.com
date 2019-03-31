@@ -7,10 +7,9 @@ $(document).ready(function(){
 		dotsClass: 'dots',
 		appendDots: $('#dots'),
 		pauseOnDotsHover: true,
-		lazyLoaded: $('#slick').show(),
+		lazyLoaded: $('#slick').fadeIn(),
 		cssEase: 'cubic-bezier(.4,0,.2,1)',
 		speed: 800,
-		lazyLoad: 'ondemand',
 	});
 
 	$('body').keydown(function(e) {

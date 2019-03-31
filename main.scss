@@ -24,23 +24,35 @@ body {
 		font-weight: 600;
 	}
 	nav {
+		background-color: white;
 		z-index: 2;
 		text-align: center;
 		display: flex;
-		top: 5em;
+		padding-top: 5em;
 		width: 100%;
 		left: 0;
 		position: absolute;
 		justify-content: space-between;
-		flex-wrap: flex;
+		flex-wrap: wrap;
 		a {
+			padding-bottom: 3.5em;
 			color: $grey;
+			padding-right: 20px;
 			text-decoration: none;
-			margin-right: 30px;
 		}
 		.active {
 			color: $black;
 			font-weight: 600;
+		}
+	}
+	@media (max-width: $phablet) {
+		nav {
+			position: fixed;
+			width: 100%;
+			a {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
 		}
 	}
 	a:hover {
@@ -57,6 +69,7 @@ body {
 		position: absolute;
 		bottom:0;
 		left:0;
+		padding: 10px;
 		z-index: 2;
 		color: $grey;
 	}
@@ -104,6 +117,7 @@ body {
 			position: sticky;
 			color: $grey;
 			line-height: 2;
+			background-color: white;
 			span {
 				font-weight: 400;
 				white-space: pre-wrap;
@@ -118,6 +132,11 @@ body {
 			b {
 				margin-left: 3px;
 				color: $black;	
+			}
+		}
+		@media (max-width: $phablet) {
+			.skills {
+				display: none;
 			}
 		}
 		.items {
@@ -184,6 +203,17 @@ body {
 
 			}
 		}
+		@media (max-width: $phablet) {
+			header {
+				right: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				max-width: 100%;
+			}
+			#backdrop {
+				display:none;
+			}
+		}
 	}
 	
 	.cards {
@@ -207,6 +237,23 @@ body {
 		}
 		.card:focus {
     		outline: none;
+		}
+		
+	}
+	@media (max-width: $phablet) {
+		.cards {
+			padding-top: 50vh;
+			margin-left: -75vw;
+		}
+		#dots {
+			margin-bottom: -55vh;
+			left: 0;
+			width: 100%;
+		}
+		#dots:before {
+			content: '↔ swipe above';
+			font-style: italic;
+			font-size: 1.2em;
 		}
 	}
 	#dots {
@@ -242,16 +289,12 @@ body {
 
 }
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: $phablet) {
-	.cards {
-		display: inline !important;
-	}
-	#filler {
-		display: inline !important;
-	}
-	.controls {
-		display: inline !important;
+/* Smaller than phablet (also point when grid becomes active) */
+@media (max-width: $phablet) {
+	#home {
+		footer {
+			bottom: -57vh;
+		}
 	}
 }
 
