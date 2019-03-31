@@ -205,6 +205,7 @@ body {
 		}
 		@media (max-width: $phablet) {
 			header {
+				margin-top: 2em;
 				right: 0;
 				padding-left: 30px;
 				padding-right: 30px;
@@ -242,11 +243,11 @@ body {
 	}
 	@media (max-width: $phablet) {
 		.cards {
-			padding-top: 50vh;
+			padding-top: 30em;
 			margin-left: -75vw;
 		}
 		#dots {
-			margin-bottom: -55vh;
+			margin-bottom: -25em;
 			left: 0;
 			width: 100%;
 		}
@@ -293,7 +294,7 @@ body {
 @media (max-width: $phablet) {
 	#home {
 		footer {
-			bottom: -57vh;
+			bottom: -35em;
 		}
 	}
 }
