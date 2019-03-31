@@ -10,6 +10,7 @@ $(document).ready(function(){
 		lazyLoaded: $('#slick').fadeIn(),
 		cssEase: 'cubic-bezier(.4,0,.2,1)',
 		speed: 800,
+		touchThreshold: 100
 	});
 
 	$('body').keydown(function(e) {
