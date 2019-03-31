@@ -118,7 +118,6 @@ body {
 			position: sticky;
 			color: $grey;
 			line-height: 2;
-			background-color: white;
 			span {
 				font-weight: 400;
 				white-space: pre-wrap;
@@ -248,7 +247,6 @@ body {
 			margin-left: -75vw;
 		}
 		#dots {
-			background-color:white;
 			margin-bottom: -28em;
 			padding-top: 20px;
 			left: 0;
@@ -261,6 +259,7 @@ body {
 		}
 	}
 	#dots {
+		background-color:white;
 		right: 50%;
 		text-align: center;
 		position: absolute;
