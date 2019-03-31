@@ -35,7 +35,7 @@ body {
 		justify-content: space-between;
 		flex-wrap: wrap;
 		a {
-			padding-bottom: 3.5em;
+			padding-bottom: 2.5em;
 			color: $grey;
 			padding-right: 20px;
 			text-decoration: none;
@@ -47,6 +47,7 @@ body {
 	}
 	@media (max-width: $phablet) {
 		nav {
+			padding-top: 2.5em;
 			position: fixed;
 			width: 100%;
 			a {
@@ -278,9 +279,11 @@ body {
 			li:not(.slick-active):after {
 				content: '○';
 			}
-			li:hover:after {
-				content: '●';
-				cursor: pointer;
+			@media (min-width: $phablet) {
+				li:hover:after {
+					content: '●';
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -298,6 +301,12 @@ body {
 		footer {
 			bottom: -35em;
 		}
+	}
+}
+
+@media (min-width: $phablet) {
+	#arrow {
+		display:none;
 	}
 }
 
