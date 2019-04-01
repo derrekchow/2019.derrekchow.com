@@ -28,14 +28,16 @@ body {
 		z-index: 2;
 		text-align: center;
 		display: flex;
-		padding-top: 5em;
+		padding-top: 2.5em;
 		width: 100%;
 		left: 0;
 		position: absolute;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		a {
+			padding-top: 2.5em;
 			padding-bottom: 2.5em;
+			padding-top: 2.5em;
 			color: $grey;
 			padding-right: 20px;
 			text-decoration: none;
@@ -47,7 +49,7 @@ body {
 	}
 	@media (max-width: $phablet) {
 		nav {
-			padding-top: 2.5em;
+			padding-top: 0;
 			position: fixed;
 			width: 100%;
 			a {
@@ -67,6 +69,7 @@ body {
 		transition-property: color, opacity;
 	}
 	footer {
+		background-color: white;
 		position: absolute;
 		bottom:0;
 		left:0;
@@ -307,6 +310,11 @@ body {
 	#arrow {
 		display:none;
 	}
+}
+
+#arrow {
+	color: $grey;
+	font-size: 2em;
 }
 
 /* Larger than tablet */

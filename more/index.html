@@ -7,6 +7,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+		<link rel="manifest" href="../favicon/site.webmanifest">
+
 		<link rel="stylesheet"  type="text/css" href="../vendor/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="../vendor/skeleton.css" />
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -107,7 +112,7 @@
 					<h2>MUSIC</h2>
 					<div class="row">
 						<div class="six columns">
-							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/7MZsWaPjQcBLP01pWe6jwt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/18AZmKpXH1kVdBMnOdkepI" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 						</div>
 						<div class="six columns">
 							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/6QROSuNHh84RpFR5L2m5oB" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -115,7 +120,7 @@
 					</div>
 					<div class="row">
 						<div class="six columns">
-							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/18AZmKpXH1kVdBMnOdkepI" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/7MZsWaPjQcBLP01pWe6jwt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 						</div>
 						<div class="six columns">
 							<iframe class="music" src="https://open.spotify.com/embed/user/227xetjpmjboa4xazsscy3sai/playlist/4o8uE2YKYZR3F3gbaTdb14" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -143,14 +148,11 @@
 		<script>
 			$(document).ready(function() {
 				$('body').fadeIn();
-				var $grid = $('.grid').masonry({
-					itemSelector: '.grid-item',
-				});
-				
-				// layout Masonry after each image loads
-				$grid.imagesLoaded().progress( function() {
-					$grid.masonry('layout');
-					$('.grid').fadeIn();
+				var $grid = $('.grid').imagesLoaded( function() {
+					$('.grid').fadeIn(2000);
+					$grid.masonry({
+						itemSelector: '.grid-item',
+					});
 				});
 			});
 		</script>
