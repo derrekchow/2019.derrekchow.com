@@ -58,7 +58,7 @@
 			<section class="items" style="padding-left:30px">
 				<article class="photos">
 					<h2>PHOTOS</h2>
-					<div class="grid" style="display:none">
+					<div class="grid" style="opacity:0">
 						<div class="grid-item">
 							<img src="../assets/photos/bridge.jpg" />
 						</div>
@@ -153,18 +153,19 @@
 		<script>
 			$(document).ready(function() {
 				$('body').fadeIn();
-				var $grid = $('.grid').imagesLoaded( function() {
-					$('.grid').fadeIn(2000);
+				var $grid = $('.grid').imagesLoaded(function() {
 					$grid.masonry({
 						itemSelector: '.grid-item',
 					});
+					$grid.imagesLoaded().done(function() {
+						$('.grid').css('opacity', 1);
+					})
 				});
 				$('.grid-item img').click(function(event) {
 					$('.modal img').attr('src', $(event.target).attr('src'));
 					$('main').css('filter', 'blur(10px)');
 					$('.modal').fadeIn();
 					$('html, body').css('overflow', 'hidden');
-					
 				});
 
 				$('.modal').click(function() {
