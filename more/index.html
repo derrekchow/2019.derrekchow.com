@@ -49,9 +49,13 @@
 			<a href="../" class="active">More</a>
 		</nav>
 
+		<div class="modal" style="display:none">
+			<img src="../assets/photos/bridge.jpg"/>
+		</div>
+
 		<main class="row">
-			<section class="items">
-				<h1 class="title">More</h1>
+			<h1 class="title">More</h1>
+			<section class="items" style="padding-left:30px">
 				<article class="photos">
 					<h2>PHOTOS</h2>
 					<div class="grid" style="display:none">
@@ -155,6 +159,19 @@
 						itemSelector: '.grid-item',
 					});
 				});
+				$('.grid-item img').click(function(event) {
+					$('.modal img').attr('src', $(event.target).attr('src'));
+					$('main').css('filter', 'blur(10px)');
+					$('.modal').fadeIn();
+					$('html, body').css('overflow', 'hidden');
+					
+				});
+
+				$('.modal').click(function() {
+					$('main').css('filter', 'blur(0)');
+					$('.modal').fadeOut();
+					$('html, body').css('overflow', 'auto');
+				})
 			});
 		</script>
 	</body>

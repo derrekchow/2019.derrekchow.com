@@ -21,7 +21,7 @@ body {
 	color: $black;
 	display: none;
 	b {
-		font-weight: 600;
+		font-weight: bold;
 	}
 	nav {
 		background-color: white;
@@ -78,6 +78,7 @@ body {
 		color: $grey;
 	}
 	.title {
+		letter-spacing: 0.5px;
 		font-size: 2.5em;
 		font-family: $serif, serif;
 		font-weight: bold;
@@ -95,22 +96,29 @@ body {
 	margin-bottom: 15%;
 }
 
-.grid {
-	.grid-item {
-		margin: 0;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		width: 23.5%;
+#work {
+	.modal {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.85);
 		img {
-			width: 100%;
+			height: 70vh;
 			box-shadow: $box-shadow;
 			border-radius: $border-radius;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			margin:auto;
 		}
 	}
-}
-
-#work {
 	main {
+		transition: filter 0.4s;
 		padding-top: 15em;
 		h1 {
 			margin-bottom: 2em;
@@ -167,10 +175,30 @@ body {
 					color: $blue;
 				}
 				h2 {
+					letter-spacing: 0.1px;
 					font-size: 1.6em;
-					font-weight: 600;
+					font-weight: bold;
 					padding-bottom: 0.5em;
 				}
+			}
+		}
+		.grid {
+			.grid-item {
+				margin: 0;
+				padding-right: 10px;
+				padding-bottom: 10px;
+				width: 23.5%;
+				img {
+					transition: opacity 0.2s;
+					width: 100%;
+					box-shadow: $box-shadow;
+					border-radius: $border-radius;
+				}
+			}
+
+			.grid-item img:hover {
+				cursor: pointer;
+				opacity: 0.8;
 			}
 		}
 	}
@@ -199,7 +227,7 @@ body {
 			p {
 				#context {
 					a {
-						font-weight: 400;
+						font-weight: 500;
 						text-decoration: none;
 					}
 				}
@@ -313,6 +341,7 @@ body {
 }
 
 #arrow {
+	text-align: center;
 	color: $grey;
 	font-size: 2em;
 }
