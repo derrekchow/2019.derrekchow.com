@@ -125,7 +125,9 @@ body {
 			span {
 				font-weight: 400;
 				white-space: pre-wrap;
-				padding: 1px 3px;
+				padding: 3px;
+				padding-top: 2px;
+				padding-bottom: 0px;
 				transition: 0.2s ease-in;
 				transition-property: background-color, color, font-weight;
 			}
@@ -151,7 +153,7 @@ body {
 				}
 			}
 			article {
-				margin-bottom: 10em;
+				margin-bottom: 8em;
 				.item {
 					text-decoration: none;
 					display: block;
@@ -165,9 +167,9 @@ body {
 						padding: 0 25px;
 						padding-top: 15px;
 						padding-bottom: 17px;
-						i {
-							color: $grey;
-						}
+					}
+					i {
+						color: $grey;
 					}
 					img {
 						width: 100%;
