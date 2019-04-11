@@ -11,25 +11,31 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 		<link rel="manifest" href="./favicon/site.webmanifest">
 
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hk-grotesk" type="text/css"/>
 		<link rel="stylesheet"  type="text/css" href="./vendor/normalize.min.css" />
 		<link rel="stylesheet" type="text/css" href="./vendor/skeleton.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-		<link rel="stylesheet" media="all" href="https://rsms.me/inter/inter.css" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="./main.css" />
 
-		<title>Derrek Chow</title>
+		<meta name="title" content="Derrek Chow">
 		<meta name="description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
+		<meta name="keywords" content="Waterloo, UW, student, college, intern, university, Canadian, internship, developer, software, designer, design, work, job, coop, co-op, uwaterloo, music, photos, food">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Derrek Chow">
+		<meta name="twitter:description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
 
 		<meta property="og:title" content="Derrek Chow">
 		<meta property="og:description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
-		<meta property="og:image" content="https://derrekchow.com/social.png">
-		<meta property="og:url" content="https://derrekchow.com">
+		<meta property="og:url" content="https://derrekchow.com/">
+		<meta property="og:site_name" content="Derrek Chow">
+		<meta property="og:type" content="website">
 
-		<meta name="twitter:title" content="Derrek Chow">
-		<meta name="twitter:description" content="I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.">
-		<meta name="twitter:image" content="https://derrekchow.com/social.png">
-		<meta name="twitter:card" content="summary_large_image">
-	
+		<title>Derrek Chow</title>
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102564495-1"></script>
 		<script>
@@ -43,16 +49,16 @@
 	<body id="home">
 		<div class="container">
 			<nav>
-				<a href="./">Home</a>
+				<a class="active" href="./">Home</a>
 				<a href="./work">Work & Projects</a>
-				<a>Resume</a>
+				<a href="./assets/resume.pdf" target="_blank">Resume</a>
 				<a href="./more">More</a>
 			</nav>
 		</div>
 		<main> 
 			<div id="backdrop"></div>
 			<header>
-				<h1 class="title" style="font-size:3em">Derrek Chow</h1>
+				<h1 class="title" style="font-size:40px; margin-bottom: 20px">Derrek Chow</h1>
 				<p>
 					I’m a Software Engineering student at the University of Waterloo with a passion for software, design, food, music, and making ambitious ideas come to life.
 					<br/><br/>
@@ -66,7 +72,7 @@
 
 		<section class="cards">
 			<div id="slick" style="display:none">
-				<div class="card" taglink="https://www.impactlabs.io/" tagline="I am inspiring and empowering ambitious computer scientists to build a better world as the Dev Team Lead of Impact Labs">
+				<div class="card" taglink="https://www.impactlabs.io/" tagline="I am inspiring and empowering ambitious computer scientists to build a better world as the Dev Team Lead of Impact Labs.">
 					<img style="top:18%; left: 45%; opacity: 0.5" width="600px" src="./assets/cards/impact-blob.svg" class="accent"/>
 					<img style="top:28%; left: 52%" width="220px" src="./assets/cards/impact-steps.png"/>
 					<img style="top:24%; left: 62%" width="250px" src="./assets/cards/impact-summit.png"/>
@@ -74,20 +80,20 @@
 					<img style="top:20%; left: 53%" width="50px" src="./assets/cards/impact-zig.svg" class="accent"/>
 					<img style="top:40%; left: 80%" width="80px" src="./assets/cards/impact-plus.svg" class="accent"/>
 				</div>
-				<div class="card" taglink="https://2018.tedxuw.com/" tagline="I've showcased amazing and inspiring individuals of Waterloo as the Web and UX Manager of TEDxUW">
+				<div class="card" taglink="https://2018.tedxuw.com/" tagline="I've showcased amazing and inspiring individuals of Waterloo as the Web and UX Manager of TEDxUW.">
 					<img style="top: 40%; right: -10%; opacity: 0.12;" width="100%" src="./assets/cards/tedx-waves.svg" class="accent"/>
 					<img style="top:45%; left: 68%" width="200px" src="./assets/cards/tedx-logo.svg" class="accent"/>
 					<img style="top:25%; left:51%; " width="400px" src="./assets/cards/tedx-home.png"/>
 					<img style="top:45%; left:50%" width="150px" src="./assets/cards/tedx-mobile.png"/>
 					<img style="top:55%; left:65%; " width="200px" src="./assets/cards/tedx-footer.png"/>
 				</div>
-				<div class="card" taglink="https://uwflow.com/" tagline="I am improving the way University students rate and review courses as the Designer of UW Flow">
+				<div class="card" taglink="https://uwflow.com/" tagline="I am improving the way university students rate and review courses as the Designer of UW Flow.">
 					<img style="top:27%; left: 50%" width="430px" src="./assets/cards/flow-courses.png"/>
 					<img style="top:45%; left: 49%" width="300px" src="./assets/cards/flow-profile.png"/>
 					<img style="top:57%; left: 63%" width="250px" src="./assets/cards/flow-signup.png"/>
 				</div>
-				<div class="card" taglink="https://hackthenorth.com/" tagline="I've crafted an impactful experience for over 1,000 students as the Head of Ceremonies and Activities for Canada's largest hackathon">
-					<img style="top:26%; left: 49%;" width="350px" src="./assets/cards/htn-sponsors.jpg"/>
+				<div class="card" taglink="https://hackthenorth.com/" tagline="I've crafted an impactful experience for over 1,000 students as the Head of Ceremonies and Activities for Canada's largest hackathon.">
+					<img style="top:23%; left: 50%; border-radius: 360px" width="350px" src="./assets/cards/htn-sponsors.jpg"/>
 					<img style="top:30%; left: 72%;" width="100px" src="./assets/cards/htn-red.png" class="accent"/>
 					<img style="top:50%; left: 62%;" width="300px" src="./assets/cards/htn-building.png" class="accent" />
 					<img style="top:55%; left: 48%;" width="150px" src="./assets/cards/htn-robot.png" class="accent" />

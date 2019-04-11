@@ -31,7 +31,7 @@ $(document).ready(function(){
 	});
 
 	$('#slick').on('afterChange', function() {
-		$('#context').html(generateContext()).fadeIn(1000);
+		$('#context').html(generateContext()).fadeIn(800);
 		$('.slick-current img:not(.no-skew)').css('transform', 'rotateY(-10deg) rotateX(-10deg) rotateZ(-1deg) scale(1)');
 		$('.card:not(.slick-current) img:not(.no-skew)').css('transform', 'rotateY(0) rotateX(0) rotateZ(0) scale(1)');
 	});

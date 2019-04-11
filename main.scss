@@ -6,22 +6,22 @@ $tablet: 750px;
 $desktop: 1000px;
 $desktophd: 1200px;
 
-$black: black;
+$black: #222;
 $light-grey: #E7E9EB;
 $grey: #A7AEB4;
 $blue: #3D93F6;
 
-$serif: '';
 $border-radius: 3px;
 $box-shadow: 0 0 40px rgba(0,0,0,0.12);
 $spacer: 30px;
-$transition: cubic-bezier(.4,0,.2,1);
+$transition: cubic-bezier(0.4,0,0.2,1);
 
 body {
 	color: $black;
 	display: none;
 	b {
 		font-weight: bold;
+		font-family: "HankenGroteskBold";
 	}
 	nav {
 		background-color: white;
@@ -44,6 +44,7 @@ body {
 		}
 		.active {
 			color: $black;
+			font-family: "HankenGroteskBold";
 			font-weight: 600;
 		}
 	}
@@ -78,10 +79,10 @@ body {
 		color: $grey;
 	}
 	.title {
-		letter-spacing: 0.5px;
+		letter-spacing: 0.1px;
 		font-size: 2.5em;
-		font-family: $serif, serif;
 		font-weight: bold;
+		font-family: "HankenGroteskBold";
 	}
 
 	:hover {
@@ -114,7 +115,7 @@ body {
 		transition: filter 0.4s;
 		padding-top: 15em;
 		h1 {
-			margin-bottom: 2em;
+			margin-bottom: 3em;
 		}
 		.skills {
 			font-size: 0.9em;
@@ -124,6 +125,7 @@ body {
 			line-height: 2;
 			span {
 				font-weight: 400;
+				font-family: "HankenGroteskMedium";
 				white-space: pre-wrap;
 				padding: 3px;
 				padding-top: 2px;
@@ -168,7 +170,7 @@ body {
 						padding-top: 15px;
 						padding-bottom: 17px;
 					}
-					i {
+					span {
 						color: $grey;
 					}
 					img {
@@ -187,12 +189,13 @@ body {
 					letter-spacing: 0.1px;
 					font-size: 1.6em;
 					font-weight: bold;
+					font-family: "HankenGroteskBold";
 					padding-bottom: 0.5em;
 				}
 			}
 		}
 		.grid {
-			transition: opacisty 0.5s;
+			transition: opacity 0.5s;
 			.grid-item {
 				margin: 0;
 				padding-right: 10px;
@@ -245,8 +248,8 @@ body {
 					a {
 						transition: border-bottom 0.3s;
 						border-bottom: 1px solid transparent;
-						font-weight: 500;
 						text-decoration: none;
+						font-family: "HankenGroteskMedium";
 					}
 					a:hover {
 						border-bottom: 1px solid $blue;
