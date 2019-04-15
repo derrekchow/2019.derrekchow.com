@@ -100,7 +100,8 @@ body {
 		height: 100%;
 		background-color: rgba(255,255,255,0.85);
 		img {
-			height: 70vh;
+			max-height: 70vh;
+			max-width: 80vw;
 			box-shadow: $box-shadow;
 			border-radius: $border-radius;
 			position:absolute;
@@ -145,6 +146,11 @@ body {
 		@media (max-width: $phablet) {
 			.skills {
 				display: none;
+			}
+		}
+		@media (min-width: $phablet) {
+			.items {
+				padding-left: 30px;
 			}
 		}
 		.items {
