@@ -59,62 +59,66 @@
 
 		<main class="row">
 			<h1 class="title">More</h1>
-			<section class="items" style="padding-left:30px">
-				<article class="photos">
+			<section class="items">
+				<article>
+					<a href="https://www.behance.net/derrekchow" target="_blank"><h2>Graphic design</h2></a>
+				</article>
+				<article>
 					<h2>Photos</h2>
-					<div class="grid" style="opacity:0">
-						<div class="grid-item">
-							<img src="../assets/photos/bridge.jpg" />
-						</div>
-						<div class="grid-item">
+					<div class="photos">
+						<div>
 							<img src="../assets/photos/cat.jpg" />
 						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/concert.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/cottage.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/dog.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/museum.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/ride1.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/ride2.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/sky1.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/sky2.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/sky3.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/to1.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/to2.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/to3.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/to4.jpg" />
-						</div>
-						<div class="grid-item">
-							<img src="../assets/photos/trees.jpg" />
-						</div>
-						<div class="grid-item">
+						<div>
 							<img src="../assets/photos/wall.jpg" />
 						</div>
+						<div>
+							<img src="../assets/photos/concert.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/ride2.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/sky2.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/cottage.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/ride1.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/sky1.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/dog.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/bridge.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/sky3.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/to1.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/to2.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/to4.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/trees.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/to3.jpg" />
+						</div>
+						<div>
+							<img src="../assets/photos/museum.jpg" />
+						</div>
 					</div>
+					<div id="dots"></div>
 				</article>
 				<article>
 					<h2>Music</h2>
@@ -151,32 +155,27 @@
 		<footer style="margin-left:-10px">© Derrek Chow 2019</footer>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('body').fadeIn();
-				var $grid = $('.grid').imagesLoaded(function() {
-					$grid.masonry({
-						itemSelector: '.grid-item',
+				$(document).ready(function(){
+					$('.photos').slick({
+						lazyLoaded: $('.photos').fadeIn(),
+						autoplay: true,
+  						autoplaySpeed: 1000,
+						variableWidth: true,
+						swipeToSlide: true,
+						centerMode: true,
+						arrows: false,
+						speed: 3000,
+						pauseOnHover: false,
+						pauseOnFocus: false,
+						cssEase: 'cubic-bezier(.4,0,.2,1)',
+						infinite: true,
+						draggable: true
 					});
-					$grid.imagesLoaded().done(function() {
-						$('.grid').css('opacity', 1);
-					})
 				});
-				$('.grid-item img').click(function(event) {
-					$('.modal img').attr('src', $(event.target).attr('src'));
-					$('main').css('filter', 'blur(10px)');
-					$('.modal').fadeIn();
-					$('html, body').css('overflow', 'hidden');
-				});
-
-				$('.modal').click(function() {
-					$('main').css('filter', 'blur(0)');
-					$('.modal').fadeOut();
-					$('html, body').css('overflow', 'auto');
-				})
 			});
 		</script>
 	</body>

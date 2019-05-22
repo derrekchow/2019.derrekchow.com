@@ -9,10 +9,10 @@ $(document).ready(function(){
 		pauseOnDotsHover: true,
 		lazyLoaded: $('#slick').fadeIn(),
 		cssEase: 'cubic-bezier(.4,0,.2,1)',
-		speed: 800,
+		speed: 1200,
 		touchThreshold: 100,
 		autoplay: true,
-  		autoplaySpeed: 5000,
+  		autoplaySpeed: 3000,
 	});
 
 	$('body').keydown(function(e) {
