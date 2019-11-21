@@ -11,7 +11,6 @@ $light-grey: #E7E9EB;
 $grey: #A7AEB4;
 $blue: #3D93F6;
 
-$serif: '';
 $border-radius: 3px;
 $box-shadow: 0 0 40px rgba(0,0,0,0.12);
 $spacer: 30px;
@@ -79,7 +78,6 @@ body {
 	}
 	.title {
 		font-size: 2.5em;
-		font-family: $serif, serif;
 		font-weight: bold;
 	}
 
